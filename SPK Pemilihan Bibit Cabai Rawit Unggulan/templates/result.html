@@ -1,0 +1,66 @@
+{% extends "index.html" %} {% block content %}
+<div class="container py-5">
+    <!-- Banner Area -->
+    <div class="banner">
+        <div class="text-center">
+            <h1 class="display-4 fw-bold text-warning">Hasil Keputusan Sistem</h1>
+            <p class="lead">Pemilihan varietas unggulan berdasarkan karakteristik tanaman Anda menggunakan metode Naive Bayes</p>
+        </div>
+    </div>
+
+    <!-- Result Section -->
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="form-container">
+                <div class="alert alert-warning text-center">
+                    <h2 class="alert-heading mb-3"><i class="bi bi-check-circle-fill"></i> Rekomendasi: {{ prediction }}</h2>
+                    <h3 class="mb-0">Tingkat Kecocokan: {{ probability }}</h3>
+                </div>
+
+                <div class="mt-4">
+                    <h4 class="text-warning mb-3"><i class="bi bi-bar-chart"></i> Detail Probabilitas:</h4>
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Varietas</th>
+                                    <th>Persentase</th>
+                                    <th style="width: 40%">Progress</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for variety, percent in details.items() %}
+                                <tr>
+                                    <td>{{ variety }}</td>
+                                    <td>{{ percent }}</td>
+                                    <td>
+                                        <div class="progress" style="height: 20px">
+                                            <div class="progress-bar bg-warning" role="progressbar" style="width: {{ percent }}" aria-valuenow="{{ percent.split('%')[0] }}" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Explanation Section -->
+                <div class="mt-5">
+                    <h4 class="text-warning mb-3"><i class="bi bi-lightbulb"></i> Penjelasan Keputusan:</h4>
+                    <ul class="list-group">
+                        {% for exp in explanations %}
+                        <li class="list-group-item bg-dark text-light border-secondary">{{ exp }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <!-- Back Button -->
+                <div class="d-grid gap-2 mt-4">
+                    <a href="/" class="btn btn-outline-warning btn-lg py-3"> <i class="bi bi-arrow-left"></i> Kembali ke Form </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

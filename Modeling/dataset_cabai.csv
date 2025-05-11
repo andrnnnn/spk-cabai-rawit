@@ -1,0 +1,19 @@
+umur,tinggi,jumlah_daun,kondisi_daun,jenis
+Ya,Ya,Banyak,Buruk,Rawit Keriting
+Ya,Ya,Banyak,Buruk,Rawit Besar
+Ya,Ya,Banyak,Buruk,Rawit Hijau
+Tidak,Tidak,Sedikit,Baik,Rawit Domba
+Tidak,Tidak,Sedikit,Baik,Rawit Putih
+Tidak,Tidak,Sedikit,Baik,Rawit Racoto
+Ya,Tinggi,Sedikit,Baik,Rawit Keriting
+Tidak,Tinggi,Banyak,Buruk,Rawit Besar
+Tidak,Tinggi,Sedikit,Banyak,Rawit Hijau
+Tidak,Tinggi,Sedikit,Banyak,Rawit Domba
+Ya,Tidak,Banyak,Banyak,Rawit Putih
+Ya,Tidak,Banyak,Banyak,Rawit Racoto
+Ya,Tidak,Sedikit,Banyak,Rawit Keriting
+Ya,Tidak,Sedikit,Banyak,Rawit Besar
+Ya,Tidak,Banyak,Banyak,Rawit Hijau
+Ya,Tidak,Banyak,Sedikit,Rawit Domba
+Ya,Tidak,Banyak,Sedikit,Rawit Putih
+Tidak,Ya,Sedikit,Banyak,Rawit Racoto
